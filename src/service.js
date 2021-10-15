@@ -5,6 +5,8 @@ const getanalysis = () => {
 
     if(isValidURL(url))
     {
+        let spinner = document.getElementById("spinner-border");
+        spinner.style.visibility = 'visible'; //'hidden'
         fetch('https://computer-vision-function.azurewebsites.net/api/computervisionexample', {
         method: 'POST',
         headers: {
@@ -15,6 +17,7 @@ const getanalysis = () => {
                 })
         
         }).then(res => res.json()).then(data => {
+            spinner.style.visibility = 'hidden';
             console.log(data);
             
             const ul = document.getElementById("result")        

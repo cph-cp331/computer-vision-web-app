@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">  
   <script src="service.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,18 @@
   <main>
     <h1>Image Analyzer</h1>
     
-      <label for="imageurl">URL:</label><input type="text" id="imageurl" name="imageurl" value="">
-      <br>
-      <input type="submit" onclick="getanalysis()" value="Get image data">    
-    <div ><ul id="result">
+    <div>
+      <label for="imageurl">URL:</label><input type="text" id="imageurl" name="imageurl" value="https://64.media.tumblr.com/c94484ae39d5ac89d43381964da5a527/fad6061407410882-46/s1280x1920/c12c65c5ca2fa6e625b26fffee6475e682cd8478.jpg">
+        <input type="submit" onclick="getanalysis()" value="Get image data">    
+      </div>
+      <div >
+        <div id="spinner-border" class="spinner-border" style="width: 3rem; height: 3rem;visibility: hidden;" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <ul id="result">
     </ul></div>
+
+
   </main>
 </body>
 
